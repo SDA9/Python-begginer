@@ -1,0 +1,4 @@
+print("Hello " + "Mariusz")
+print("How are you today?\nEverything is fine?")
+
+print("So, hello Mariusz " + input("May I please your 2nd name? "))
