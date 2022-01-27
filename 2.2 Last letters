@@ -1,0 +1,7 @@
+fname = (input("Your name: "))
+fsurname = (input("Your surname: "))
+print("Your initials: " + fname + " " + fsurname)
+
+lname = len(fname) - 1
+lsurname = len(fsurname) - 1
+print("Last ms letters are: " + fname[lname] + fsurname[lsurname])
