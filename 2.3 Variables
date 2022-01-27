@@ -1,0 +1,9 @@
+stringVal = "Anon"
+integerVal = 254_434
+floatVal = 125.12
+booleanVal = True
+
+print("String: " + stringVal)
+print("Integer: " + str(integerVal))
+print("Float: " + str(floatVal))
+print("Boolean: " + str(booleanVal))
