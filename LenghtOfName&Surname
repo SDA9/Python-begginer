@@ -1,0 +1,8 @@
+name = input("What is your name?\n")
+surname = input("What is your surname?\n")
+print("Hello " + name + " " + surname)
+
+longN = len(name)
+longSn = len(surname)
+longTotal = longN + longSn
+print("Length of name&surname is: " + str(longTotal))
