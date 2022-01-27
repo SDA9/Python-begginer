@@ -1,0 +1,3 @@
+fname = (input("Your name: ")[0])
+fsurname = (input("Your surname: ")[0])
+print("Your initials: " + fname + fsurname)
