@@ -1,0 +1,23 @@
+import math
+
+print("Type 2 digits.")
+first_digit = int(input("First digit: "))
+second_digit = int(input("Second digit: "))
+
+addition = first_digit + second_digit
+substraction = first_digit - second_digit
+multiplication = first_digit * second_digit
+division =  first_digit / second_digit
+modulo =  first_digit % second_digit
+power =  first_digit * second_digit
+square_r =  (math.sqrt(first_digit))
+square_r_secdigit = math.pow(first_digit, 1.0/second_digit) 
+
+print("Addition: " + str(addition))
+print("Substraction: " + str(substraction))
+print("Multiplication:" + str(multiplication))
+print("Division: " + str(division))
+print("Rest of division: " + str(modulo))
+print("Exponents: " + str(power))
+print("Square r: " + str(square_r))
+print("Square secound digit: " + str(square_r3))
