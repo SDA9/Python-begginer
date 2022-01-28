@@ -6,7 +6,3 @@ we = float(weight)
 BMI = we / (he**2)
 print(int(BMI))
 
-#
-
-print(round(12/18,3))
-print(type(8//3))
