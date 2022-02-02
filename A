@@ -1,0 +1,68 @@
+print("Witaj podróżniku. Na początek powiedz mi jak się nazywasz.\n")
+player_name = input("Moje imię to: ")
+print("Odpowiedz na pytanie kim jesteś?\n")
+print("Archangelem - wpisz A\n Pandemonem - wpisz P\n Druidem - D")
+player_character = input()
+if player_character == "A":
+  print("Oto twoja postać!\n")
+  print('''
+         __/)     (\__
+    ,-'~~(   _   )~~`-.
+   /      \/'_`\/      \
+  |       /_(_)_\       |
+  |     _(/(\_/)\)_     |
+  |    / // \ / \\ \    |
+   \  | ``  / \ ''  |  /
+    \  )   /   \   (  /
+     )/   /     \   \(
+     '    `-`-'-'    `
+  ''')
+else:
+  print("nie")
+  
+  
+         *                       *
+            *                 *
+           )       (\___/)     (
+        * /(       \ (. .)     )\ *
+          # )      c\   >'    ( #
+           '         )-_/      '
+         \\|,    ____| |__    ,|//
+           \ )  (  `  ~   )  ( /
+            #\ / /| . ' .) \ /#
+            | \ / )   , / \ / |
+             \,/ ;;,,;,;   \,/
+              _,#;,;;,;,
+             /,i;;;,,;#,;
+            ((  %;;,;,;;,;
+             ))  ;#;,;%;;,,
+           _//    ;,;; ,#;,
+          /_)     #,;  //
+                 //    \|_
+                 \|_    |#\
+                  |#\    -"  b'ger
+                   -"
+
+
+
+
+                   ;
+                   `,
+                  ' :.
+            __      `;.
+          /' /\   ,   \
+        /   |ee|      `;
+       (    |_,| ,     `,
+        )  , \ '       `:
+       |    """"----,__,_.____,_   
+       ;      _     |--,_;    '
+      ,     ,' `"---'  ,:
+      |    ,  : /,     ,'
+      |       ,/'     ,;
+      |   '   :|  ,   /'
+      ,        |    ,;
+     ,         |  , :'
+     |         `   ,'
+    ,'          `  ;
+__==' ___, pb __/_
+
