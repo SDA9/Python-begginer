@@ -113,13 +113,15 @@ if play_decision == "T":
   elif crossing_game == "P":
     print("O nieeee. Pożera Cię potwór")
     print('''
-         _.--~~~~~~~--._
+       _.--~~~~~~~--._
    /~ ___           ~-._ __
   ( /~   > /-._   _, o  )~\\
-   \\    \<    ~<<==\(\_| '''
-   _)    '''     \\  `~'
+   \\    \<    ~<<==\(\_| ''
+   _)    ''     \\  `~'
     ''')
 else:
   print("Nie istniejesz...")
   sys.exit("Nie istniejesz...") 
+
+
 
