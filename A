@@ -1,33 +1,40 @@
+import sys
+import os
+import time
+def clear_console(): return os.system('clear')
+
 print("Witaj podróżniku. Na początek powiedz mi jak się nazywasz.\n")
 player_name = input("Moje imię to: ")
 print("Odpowiedz na pytanie kim jesteś?\n")
-print("Archangelem - wpisz A\n Pandemonem - wpisz P\n Druidem - D")
-player_character = input()
+print("Archangelem - wpisz A\nPandemonem - wpisz P\nDruidem - D")
+player_character = input().upper()
+time.sleep(1.5)
+clear_console()
 if player_character == "A":
-  print("Oto twoja postać!\n")
+  print(f"Oto twoja postać! {player_name}\n")
   print('''
-         __/)     (\__
-    ,-'~~(   _   )~~`-.
-   /      \/'_`\/      \
-  |       /_(_)_\       |
-  |     _(/(\_/)\)_     |
-  |    / // \ / \\ \    |
-   \  | ``  / \ ''  |  /
-    \  )   /   \   (  /
-     )/   /     \   \(
-     '    `-`-'-'    `
+     __/)     (\__
+  ,-'~~(   _   )~~`-.
+ /      \/'_`\/     \
+
+|       /_(_)_\       |
+|     _(/(\_/)\)_     |
+|    / // \ / \\ \    |
+ \  | ``  / \ ''  |  /
+  \  )   /   \   (  /
+   )/   /     \   \(
+   '    `-`-'-'    `
   ''')
-else:
-  print("nie")
-  
-  
-         *                       *
+elif player_character == "P":
+  print(f"Oto twoja postać! {player_name}\n")
+  print('''
+           *                       *
             *                 *
            )       (\___/)     (
         * /(       \ (. .)     )\ *
           # )      c\   >'    ( #
            '         )-_/      '
-         \\|,    ____| |__    ,|//
+         \|,    ____| |__    ,|//
            \ )  (  `  ~   )  ( /
             #\ / /| . ' .) \ /#
             | \ / )   , / \ / |
@@ -40,17 +47,19 @@ else:
           /_)     #,;  //
                  //    \|_
                  \|_    |#\
-                  |#\    -"  b'ger
+
+                  |#\    -"  
                    -"
-
-
-
-
-                   ;
+  ''')
+elif player_character == "D":
+  print(f"Oto twoja postać! {player_name}\n")
+  print('''
+                     ;
                    `,
                   ' :.
             __      `;.
           /' /\   ,   \
+
         /   |ee|      `;
        (    |_,| ,     `,
         )  , \ '       `:
@@ -64,5 +73,53 @@ else:
      ,         |  , :'
      |         `   ,'
     ,'          `  ;
-__==' ___, pb __/_
+__==' ___,    __/_
+
+  ''')
+else:
+  print("Nie istniejesz...")
+  sys.exit("Nie istniejesz...")
+
+print("Mam nadzieję, że jesteś gotowy na wielką podróż w poszukiwaniu Kamienia Enkrypcji... [T/N]")
+play_decision = input()
+if play_decision == "T":
+  print("Przeniosę Cię zatem do Gór Ewanult, powodzenia!")
+  time.sleep(2.5)
+  clear_console()
+  print("Widzisz przed sobą bardzo rozległe jezioro. Musisz przedostać się na drugą stronę.")
+  print('''
+                  _
+             .''.' \    _  __
+ ___         './    '. ' `'  `
+    '._______.'       \
+
+                       '.__________
+                                   '-.____________
+ _________________________________________________'.__________________
+                                      ____________.'
+                         __________.-'
+      _______          .'                      
+ ___.'       '.       /               '-._         
+             .'\    .' ._,.__,        ____\____.o.
+             '..'._/                 '-._______.-'
+  ''')
+  print("Jak chcesz się przeprawić?")
+  print("[P] - aby przepłynąć z wykorzystaniem swoich rąk.")
+  print("[L] - aby przepłynąć z wykorzystaniem łódki wiodcznej po prawej.")
+  print("[O] - aby obejść z wykorzystaniem nóg.")
+  crossing_game = input()
+  if crossing_game == "L":
+    print("Przyciągasz bliżej łódź za pomocą swojej mocy. Wsiadasz i płyniesz. Delektujesz się szumem, niżej widzisz jakieś bestie, które chętnie zajęłyby się Tobą gdybyś próbował przepłynąć jezioro bez łodzi.")
+  elif crossing_game == "P":
+    print("O nieeee. Pożera Cię potwór")
+    print('''
+         _.--~~~~~~~--._
+   /~ ___           ~-._ __
+  ( /~   > /-._   _, o  )~\\
+   \\    \<    ~<<==\(\_| '''
+   _)    '''     \\  `~'
+    ''')
+else:
+  print("Nie istniejesz...")
+  sys.exit("Nie istniejesz...") 
 
