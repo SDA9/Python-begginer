@@ -111,7 +111,7 @@ if play_decision == "T":
   if crossing_game == "L":
     print("Przyciągasz bliżej łódź za pomocą swojej mocy. Wsiadasz i płyniesz. Delektujesz się szumem, niżej widzisz jakieś bestie, które chętnie zajęłyby się Tobą gdybyś próbował przepłynąć jezioro bez łodzi.")
   elif crossing_game == "P":
-    print("O nieeee. Pożera Cię potwór")
+    print("Podchodzisz blisko brzegu, z początku płynie się mawet łatwo. Nagle coś ociera się o Twoje nogi... O nieeee. Pożera Cię potwór")
     print('''
        _.--~~~~~~~--._
    /~ ___           ~-._ __
