@@ -1,0 +1,9 @@
+numb = 3
+if numb > 0:
+    print(numb, "is a positive number.")
+print("This is always printed. as stage 0")
+
+numb = -1
+if numb > 0:
+    print(numb, "is a positive number.")
+print("This is also always printed. as stage 0")
