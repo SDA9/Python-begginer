@@ -1,0 +1,254 @@
+import sys
+import os
+import time
+def clear_console(): return os.system('clear')
+
+print("Witaj podróżniku. Na początek powiedz mi jak się nazywasz.\n")
+player_name = input("Moje imię to: ")
+print("Odpowiedz na pytanie kim jesteś?\n")
+print("Archangelem - wpisz A\nPandemonem - wpisz P\nDruidem - D")
+player_character = input().upper()
+time.sleep(1.5)
+clear_console()
+if player_character == "A":
+  print(f"Oto twoja postać! {player_name}\n")
+  print('''
+     __/)     (\__
+  ,-'~~(   _   )~~`-.
+ /      \/'_`\/     \
+
+|       /_(_)_\       |
+|     _(/(\_/)\)_     |
+|    / // \ / \\ \    |
+ \  | ``  / \ ''  |  /
+  \  )   /   \   (  /
+   )/   /     \   \(
+   '    `-`-'-'    `
+  ''')
+elif player_character == "P":
+  print(f"Oto twoja postać! {player_name}\n")
+  print('''
+           *                       *
+            *                 *
+           )       (\___/)     (
+        * /(       \ (. .)     )\ *
+          # )      c\   >'    ( #
+           '         )-_/      '
+         \|,    ____| |__    ,|//
+           \ )  (  `  ~   )  ( /
+            #\ / /| . ' .) \ /#
+            | \ / )   , / \ / |
+             \,/ ;;,,;,;   \,/
+              _,#;,;;,;,
+             /,i;;;,,;#,;
+            ((  %;;,;,;;,;
+             ))  ;#;,;%;;,,
+           _//    ;,;; ,#;,
+          /_)     #,;  //
+                 //    \|_
+                 \|_    |#\
+
+                  |#\    -"  
+                   -"
+  ''')
+elif player_character == "D":
+  print(f"Oto twoja postać! {player_name}\n")
+  print('''
+                     ;
+                   `,
+                  ' :.
+            __      `;.
+          /' /\   ,   \
+
+        /   |ee|      `;
+       (    |_,| ,     `,
+        )  , \ '       `:
+       |    """"----,__,_.____,_   
+       ;      _     |--,_;    '
+      ,     ,' `"---'  ,:
+      |    ,  : /,     ,'
+      |       ,/'     ,;
+      |   '   :|  ,   /'
+      ,        |    ,;
+     ,         |  , :'
+     |         `   ,'
+    ,'          `  ;
+__==' ___,    __/_
+
+  ''')
+else:
+  print("Nie istniejesz...")
+  sys.exit("Nie istniejesz...")
+
+print("Mam nadzieję, że jesteś gotowy na wielką podróż w poszukiwaniu Kamienia Enkrypcji... [T/N]")
+play_decision = input().upper()
+if play_decision == "T":
+  print("Przeniosę Cię zatem do Gór Ewanult, powodzenia!")
+  time.sleep(2.5)
+  clear_console()
+  print("Widzisz przed sobą bardzo rozległe jezioro. Musisz przedostać się na drugą stronę.")
+  print('''
+                  _
+             .''.' \    _  __
+ ___         './    '. ' `'  `
+    '._______.'       \
+
+                       '.__________
+                                   '-.____________
+ _________________________________________________'.__________________
+                                      ____________.'
+                         __________.-'
+      _______          .'                      
+ ___.'       '.       /               '-._         
+             .'\    .' ._,.__,        ____\____.o.
+             '..'._/                 '-._______.-'
+  ''')
+  print("Jak chcesz się przeprawić?")
+  print("[P] - aby przepłynąć z wykorzystaniem swoich rąk.")
+  print("[L] - aby przepłynąć z wykorzystaniem łódki wiodcznej po prawej.")
+  print("[O] - aby obejść z wykorzystaniem nóg.")
+  crossing_game = input().upper()
+  if crossing_game == "L":
+    print("Przyciągasz bliżej łódź za pomocą swojej mocy. Wsiadasz i płyniesz. Delektujesz się szumem, niżej widzisz jakieś bestie, które chętnie zajęłyby się Tobą gdybyś próbował przepłynąć jezioro bez łodzi.")
+    time.sleep(8.5)
+    clear_console()
+    print("Teraz, gdy znajdujesz się po drugiej stronie brzegu nic nie będzie już takie jak kiedyś. Rozglądasz się w lewo, w przód i w prawo. Kolejna ciężka decyzja przed Tobą.\nNa lewo widzisz jakieś lekkie podejście ale szłyszysz także skrzeki. Co to może być? Czyżby były to harpie?\nNa środku bardzo strome podejście, w dodatku słychać ciskanie głazami. Zastanawiasz się czy to tylko zwietrzałe skały czy może skalne olbrzymy toczą bój ze sobą?\nZ prawej strony wejście bardziej strome niż z lewej ale łatwiejsze niż po środku, widać buchający ogień. Być może to smok?\nZastanów się mądrze, jeżeli natrafisz na zbyt silnego przeciwnika to zginiesz marnie...")
+    print(f"Zatem {player_name} którą stronę wybierasz? [L] - lewo, [S] - środek, [P] - prawo")
+    side_game = input().upper()
+    if side_game == "L":
+      time.sleep(1.5)
+      clear_console()
+      print(f"{player_name} natrafiłeś na harpie! Szykuj się do bitwy!")
+      print('''
+        ,                                       ,
+        |\                                      /|
+     ,   .'._ ,                           ,  _.'/   ,
+     |\  {'. '-`\,      ,-._**_.-,      ,/`-' .'}  /|
+      \`'-'-.  '.`\      \*____*/      /`.'  .-'-'`/
+    ,'-'-._  '.  ) )     /`    `\     ( (  .'  _.-'-',
+    |.'- _ '.   , /     /  /""\  \     \ ,  .'  _ -'/|
+     .'-.   .  ; (      \_|^  ^|_/      ) ;   .  .-'/
+      `'--, . ;  {`-.      \__/      .-'}  ; . ,--'`
+      '--`_. ;  { ^  \    _|  |_    /  ^ }  ; ._`--'
+      `,_.--  ;  { ^  `-'`      `'-`  ^ }  ;  --._,`
+        ,_.-    ; {^    /        \    ^} ;    -._,
+         ,_.-`), /\{^,/\._'_/\_'_//\,^}/\ ,(`-._,
+           _.'.-` /.'   \        /   `.\ `-.'._
+          `  _.' `       \      /       ` '._   `
+                        .-'.  .'-.
+                      .'    `` ^  '.
+                     /  ^ ^   ^  ^  \
+
+                     | ^    ^   ^   |
+                    /^   ^/    \  ^  \
+
+                    \,_^_/    ^ \_,^./
+                     /=/  \^   /  \=\
+
+                 __ /=/_   | ^|   _\=\ __
+               <(=,'=(==,) |  | (,==)=',=)>
+                 /_/|_\    /  \    /_|\_\
+
+                 `V (=|  .'    '.  |=) V`
+                     V  / _/  \_ \  V
+                       `"` \  / `"`
+                            \(
+      ''')
+      time.sleep(3)
+      clear_console
+      print("Walka rozpoczęła się na dobre. Teraz wszystko zależy od Twojej siły, reakcji i sprytu. Pamiętaj na każdą decyzję będziesz miał ułamki sekund.\n[U] - unik\n[S] - skok\n[C] - cios | 8 oddechów")
+      print("Zapamiętaj! Gdy harpia atakuje z prawej musisz skoczyć [S]. Gdy harpia atakuje z lewej wykonaj unik [U]. Gdy harpia przekręca się zadaj jej cios [C]")
+      time.sleep(10)
+      clear_console
+      print()
+      clear_console
+      hit_1_game = input("Leci pazurami z prawej: ").upper()
+      time.sleep(3)
+      if hit_1_game == "S":
+        hit_2_game = input("Leci pazurami z prawej: ").upper()
+        time.sleep(3)
+        if hit_2_game == "S":
+           hit_3_game = input("Leci pazurami z lewej: ").upper()
+           time.sleep(3)
+           if hit_3_game == "U":
+             hit_4_game = input("Leci pazurami ze środka: ").upper()
+             time.sleep(3)
+             if hit_4_game == "C":
+              print(f"Skarb jest Twój {player_name}")
+              print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+              input()
+             else:
+              print("Nie żyjesz...")
+              sys.exit("Nie istniejesz...")
+           else:
+            print("Nie żyjesz...")
+            sys.exit("Nie istniejesz...")
+        else:
+          print("Nie żyjesz...")
+          sys.exit("Nie istniejesz...")
+      else:
+        print("Nie żyjesz...")
+        sys.exit("Nie istniejesz...")
+    elif side_game == "S":
+      time.sleep(1.5)
+      clear_console()
+      print("Zacząełś wspinać się na górę, nie jest lekko ale przynjamniej droga będzie znacznie krótsza.  Gdy wspiąłeś się na kolejną pułkę sklaną zobaczyłeś go.\n Ttto olbrzym. Coś ścisnęło Cię w pasie i przerwało na pół... To gromowładny bóg olbrzymów. Skończył z Tobą za nim jeszcze zdażyłeś obejrzeć dokładnie skalnego olbrzyma...")
+    elif side_game == "P":
+      time.sleep(1.5)
+      clear_console()
+      print("Szło się nie najgorzej, w połowie drogi znowu zobaczyłeś ogień. Buchał niczym podsycany przez diabły. Szybko wzbił się w powietrze i wyrósł nagle przed Tobą. Ogromno i potężny. To był Czarny Smok, jeden z 6 najsilnijeszych smoków. W sekundzie zionął w Twoją stronę, a Ty zamieniłeś się w kupkę popiołu...")
+    else:
+      print("Nie istniejesz...")
+      sys.exit("Nie istniejesz...")  
+  elif crossing_game == "P":
+    print("Podchodzisz blisko brzegu, z początku płynie się mawet łatwo. Nagle coś ociera się o Twoje nogi... O nieeee. Pożera Cię potwór")
+    print('''
+       _.--~~~~~~~--._
+   /~ ___           ~-._ __
+  ( /~   > /-._   _, o  )~\\
+   \\    \<    ~<<==\(\_| ''
+   _)    ''     \\  `~'
+    ''')
+  elif crossing_game == "O":
+    print("Idziesz już bardzo długo. Wykonujesz skok, w tych trudnych warunkach zużywasz resztę many która drzemała w Tobie. Na Twojej drodze pojawia się dziwny stwór. Pędzi w Twoim kierunku, odskakujesz w lewo, potem w prawo. To na nic, bestia przebija Cię kłami i kończysz...")
+    print('''
+          -~~~~-
+         |O __ O|
+      -__|_\__/_|__-
+      ---(__/\__)---
+        /||~--~||\
+
+       / ||    || \
+
+      |  `'    `'  |
+    _/ /\__    __/\ \_
+  ~~~~~    ~~~~    ~~~~~ 
+    ''')
+  else:
+    print("Brak decyzji to zła deyczja.")
+    sys.exit("Nie istniejesz...") 
+else:
+  print("Nie istniejesz...")
+  sys.exit("Nie istniejesz...") 
+
