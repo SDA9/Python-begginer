@@ -3,3 +3,6 @@ import random
 random_flo = random.random()
 
 print(random_flo)
+
+random_flo2 = random.random()*5
+print(random_flo2)
