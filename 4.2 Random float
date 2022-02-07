@@ -1,0 +1,5 @@
+import random
+
+random_flo = random.random()
+
+print(random_flo)
