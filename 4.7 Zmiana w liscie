@@ -1,0 +1,17 @@
+lista_zakup = ["Jabłko","Pomarańcza","Ser","Sałata","Sok","Papryka"]
+
+print("\nPoniżej cała lista:")
+for i in lista_zakup:
+  print("-",i)
+
+pozycja_zmiana = int(input("Podaj pozycję którą chcesz zmienić: [1-6] - "))
+print("Wybrałeś", lista_zakup[pozycja_zmiana - 1])
+stara_pozycja = lista_zakup[pozycja_zmiana - 1]
+zmiana_na = input("Podaj na jaką chesz zmienić: ")
+lista_zakup[pozycja_zmiana - 1] = zmiana_na
+
+print("Zmaiana z ",stara_pozycja, "na ", zmiana_na)
+
+print("\nNowa lista:")
+for i in lista_zakup:
+  print("-",i)
