@@ -1,0 +1,5 @@
+lista_zakup = ["Jabłko","Pomarańcza","Ser","Sałata","Sok","Papryka"]
+
+print("Pozycja -1: ", lista_zakup[-1])
+print("Pozycja 0: ", lista_zakup[0])
+print("Pozycja 1: ", lista_zakup[1])
