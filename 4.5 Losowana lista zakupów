@@ -1,0 +1,7 @@
+import random
+
+lista_zakup = ["Jabłko","Pomarańcza","Ser","Sałata","Sok","Papryka"]
+
+random_pozycja = random.randint(0,5)
+
+print("Losuję pozycję do kupna. Będzie to pozycja: " , lista_zakup[random_pozycja])
