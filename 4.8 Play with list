@@ -1,0 +1,22 @@
+list_of_items = ["Jaguar", "Porsche", "Opel","Audi"]
+print(list_of_items)
+
+list_of_items.append("Toyota")
+print(list_of_items)
+
+list_of_items.remove("Jaguar")
+print(list_of_items)
+
+list_of_items.insert(0,"Volvo")
+print(list_of_items)
+
+list_of_items.reverse()
+print(list_of_items)
+
+print("Ilość elementów ",list_of_items.count("Jaguar"))
+
+list_of_items.extend("Kia")
+print(list_of_items)
+
+list_of_items.clear()
+print(list_of_items)
