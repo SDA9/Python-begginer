@@ -1,0 +1,13 @@
+import random
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+
+agreg = int(names_string.count(','))
+los = int(random.randint(0,agreg))
+print(names[los])
+
+agreg2 = int(len(names))
+los2 = int(random.randint(0,agreg2-1))
+print(names[los2])
+
+print(random.choice(names))
