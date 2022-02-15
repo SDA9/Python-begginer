@@ -1,0 +1,10 @@
+first_list = ["Pies","Kot","Małpa"]
+second_list = ["Papuga","Słoń","Koń"]
+
+fix_pets = [first_list,second_list]
+
+print(fix_pets)
+print(fix_pets[0][0])
+print(fix_pets[0][1])
+print(fix_pets[1][0])
+print(fix_pets[1][1])
