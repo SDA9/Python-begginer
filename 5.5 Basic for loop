@@ -1,0 +1,7 @@
+agents = ["Booking","HRS","Expedia","GDS"]
+
+for agent in agents:
+  print(agent)
+
+for i in range(0,3):
+  print(i)
