@@ -1,0 +1,10 @@
+student_heights = input("Input a list of student heights (one by one, separetly by space)\n").split()
+for n in range(0, len(student_heights)):
+  student_heights[n] = int(student_heights[n])
+
+quantity_heights = (len(student_heights))
+sum_heights = (sum(student_heights))
+
+average_heights = round((sum_heights/quantity_heights),2)
+
+print(f"Average students height: ",average_heights)
