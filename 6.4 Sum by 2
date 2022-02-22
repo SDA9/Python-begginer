@@ -1,0 +1,11 @@
+suma=0
+suma2=0
+
+for number in range(2,101,2):
+    suma += number
+print(suma)
+
+for number in range(1,101):
+  if number % 2 == 0:
+    suma2+= number
+print(suma2)
