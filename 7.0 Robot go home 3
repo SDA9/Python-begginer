@@ -1,0 +1,28 @@
+
+def go_3():
+ for i in range(1,4):
+    move()
+
+def turn_right():
+  for j in range(1,4):
+    turn_left()
+    
+def move_forward():
+ each_time = 0
+ while each_time < 3:
+  go_3()
+  turn_left()
+  go_3()
+  turn_right()
+  move()
+  turn_right()
+  each_time = each_time + 1
+    
+def move_quickly():
+ go_3()
+ turn_left()
+ go_3()
+
+
+move_forward()
+move_quickly()
