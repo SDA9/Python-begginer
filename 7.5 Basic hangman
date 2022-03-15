@@ -1,0 +1,47 @@
+import random
+import os
+
+def clear_console(): 
+  return os.system('clear')
+  
+word_list = ["pies","kot","mysz","kangur"]
+pies = "Uwielbia człowieka i na kość czeka"
+kot = "Jest małym spryciarzem, skacze jak w zegarze"
+mysz = "Popiskuje mało, gdyby nic tu się nie stało"
+kangur = "Na zakupy nie chodzi, a torbą brodzi"
+text_under = []
+ended = False
+bad_point_status = 0
+next_letter = 1
+
+that_word = random.choice(word_list)
+length_word = len(that_word)
+print(that_word)
+
+for i in range(0,length_word):
+  text_under = text_under + ['_']
+print(text_under)
+
+while ended is False:
+  if next_letter > length_word:
+    ended = True    
+  else:    
+    print("Bieżąca ilosć trafień złych to: ",bad_point_status)
+    letter = input("Podaj literę: ")
+    letter_pos = that_word.find(letter)
+    if letter_pos in range(0,length_word):
+        clear_console()
+        print("Trafiona liter: ",that_word[letter_pos])
+        letter_pos = that_word.find(letter)
+        text_under[letter_pos] = letter
+        print(text_under)
+        next_letter += 1
+        result = "Wygrałeś!" 
+    else:
+        bad_point_status += 1  
+        if bad_point_status >= 11:
+          ended = True
+          result = "Przegrałeś!"
+        else:
+          ended = False
+print(result)
