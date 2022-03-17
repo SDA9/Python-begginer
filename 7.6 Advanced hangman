@@ -1,0 +1,146 @@
+import random
+import os
+import time
+
+def clear_console(): 
+  return os.system('clear')
+  
+def numbers_to_strings(argument):
+    switcher = {
+        0: pies,
+        1: kot,
+        2: mysz,
+        3: kangurka,
+    }
+    return switcher.get(argument, "nothing")
+  
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+      |
+      |
+      |
+      |
+      |
+=========
+''', '''
+  
+      |
+      |
+      |
+      |
+      |
+=========
+''']
+
+
+
+word_list = ['pies','kot','mysz','kangurka']
+pies = "Uwielbia człowieka i na kość czeka"
+kot = "Jest małym spryciarzem, skacze jak w zegarze"
+mysz = "Popiskuje mało, gdyby nic tu się nie stało"
+kangurka = "Na zakupy nie chodzi, a torbą brodzi"
+lives = 8
+end_game = False
+hint = False
+
+#word_list = [['pies',0],['kot',1],['mysz',2],['kangurka',3]]
+#i = random.randint(0,3)
+#rand_word = word_list[i][0]
+#word_pos = i
+
+rand_word = random.choice(word_list)
+word_pos = word_list.index(rand_word)
+word_len = len(rand_word)
+display_word = []
+
+for _ in range(word_len):
+  display_word += "_"
+
+while not end_game:
+  if hint == False:
+    th_hint = input("Do you want a hint (3 lives)? [y - yes/n - no/ r - never]: ").lower()
+    if th_hint == "y":
+      hint = True
+      lives -= 3
+      if __name__ == "__main__":
+        argument=word_pos
+        print (numbers_to_strings(argument))
+    elif th_hint == "r":
+      print("Hint is non-available now")
+      hint = True
+      time.sleep(2.5)
+      clear_console()
+      
+  guess_letter = input("Guess a letter: ").lower()  
+  for pos in range(word_len):
+    letter = rand_word[pos]
+    if letter == guess_letter:
+      display_word[pos] = letter
+  clear_console()
+  if guess_letter not in rand_word:
+    lives -= 1
+    if lives == 0:
+      end_game = True
+      print("Oh no! You louse")
+      
+  print(f"{' '.join(display_word)}")
+  if "_" not in display_word:
+    end_game = True
+    print("You win!")
+    
+  print(stages[lives])
