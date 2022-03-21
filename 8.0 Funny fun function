@@ -1,0 +1,4 @@
+def funny_fun(laug,hty):
+  print(f"So {laug} {hty}")
+
+funny_fun("htya","lauga")
