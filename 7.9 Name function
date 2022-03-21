@@ -1,0 +1,4 @@
+def fun_name(name):
+  print(f"Hello, there {name}")
+
+fun_name("Mr. knows")
