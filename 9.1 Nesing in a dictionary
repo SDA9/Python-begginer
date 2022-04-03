@@ -34,4 +34,12 @@ travel_log3 = [
 },
 ]
 
-print(capitals,"\n \n",travel_log1,"\n \n",travel_log2,"\n \n",travel_log3)
+list_pl=["Warszawa", "Gdynia", "Katowice"]
+list_ge=["Berlin", "Hamburg", "Stuttgart"]
+
+travel_log4 = {
+  "Poland": list_pl,
+  "Germany": list_ge,
+}
+
+print(capitals,"\n \n",travel_log1,"\n \n",travel_log2,"\n \n",travel_log3,"\n \n",travel_log4)
