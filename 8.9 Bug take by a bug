@@ -1,0 +1,10 @@
+program_dictionary = {
+  "Bug": "An error in a program that prevents the program from running as expected.",
+  "Function": "A piece of code that you can easily call over and over again.",
+"Loop":"The action of doing something over and over again."}
+
+print(program_dictionary["Bug"])
+
+program_dictionary["Bug"] = "A bug is a general term used to describe any unexpected problem with hardware or software. "
+
+print(program_dictionary["Bug"])
