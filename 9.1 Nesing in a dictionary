@@ -1,0 +1,37 @@
+#Nesting
+
+capitals = {
+  "Poland": "Warsaw",
+  "Germany": "Berlin",
+}
+
+#Nesting a List in a Dictionary
+
+travel_log1 = {
+  "Poland": ["Warszawa", "Gdynia", "Katowice"],
+  "Germany": ["Berlin", "Hamburg", "Stuttgart"],
+}
+
+#Nesting Dictionary in a Dictionary
+
+travel_log2 = {
+  "Poland": {"cities_visited": ["Warszawa", "Gdynia", "Katowice"], "total_visits": 55},
+  "Germany": {"cities_visited": ["Berlin", "Hamburg", "Stuttgart"], "total_visits": 15/5},
+}
+
+#Nesting Dictionaries in Lists
+
+travel_log3 = [
+{
+  "country": "Poland", 
+  "cities_visited": ["Warszawa", "Gdynia", "Katowice"], 
+  "total_visits": 55,
+},
+{
+  "country": "Germany",
+  "cities_visited": ["Berlin", "Hamburg", "Stuttgart"],
+  "total_visits": 15/5,
+},
+]
+
+print(capitals,"\n \n",travel_log1,"\n \n",travel_log2,"\n \n",travel_log3)
