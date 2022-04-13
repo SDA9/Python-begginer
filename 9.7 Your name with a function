@@ -1,6 +1,6 @@
 def form_name(f_name, l_name):
   if  f_name == "" or l_name == "":
-   print("Oh no, empty data") 
+    return "Oh no, empty data"
   else:
     formated_f_name = (f_name.title())
     formated_l_name = (l_name.title())
