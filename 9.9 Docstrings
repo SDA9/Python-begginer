@@ -1,0 +1,24 @@
+def majority(age):
+  """Provide age to get an information about possibility of car driving"""
+  age = int(age)
+  if age >= 18:
+    comm = "You can drive a car!"
+  else:
+    comm = "You can not drive a car."
+  return comm
+  
+
+comm = majority(input("How old are you? "))
+print(comm)
+
+
+
+
+
+
+
+
+
+
+
+
