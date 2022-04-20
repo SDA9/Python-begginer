@@ -1,0 +1,35 @@
+#Add
+def add(numb1, numb2):
+  return numb1+numb2
+
+#Substract
+def substract(numb1, numb2):
+  return numb1-numb2
+
+#Multiply
+def multiply(numb1, numb2):
+  return numb1*numb2
+
+#Divide
+def divide(numb1, numb2):
+  return numb1/numb2
+
+operant = {
+  "+": add,
+  "-": substract,
+  "*": multiply,
+  "/": divide
+}
+
+numm1 = int(input("What's the first number?: "))
+numm2 = int(input("What's the second number?: "))
+
+for symbol in operant:
+  print(symbol)
+
+operant_symbol = input("Pick an operation form the line above: ")
+
+calc_function = operant[operant_symbol]
+answer = calc_function(numm1, numm2,)
+
+print(f"{numm1} {operant_symbol} {numm2} = {answer}")
