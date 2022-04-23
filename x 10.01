@@ -1,0 +1,67 @@
+import os
+import logo
+
+def clearConsole():
+    command = 'clear'
+    if os.name in ('nt', 'dos'):  
+        command = 'cls'
+    os.system(command)
+
+clearConsole()
+
+def add(numb1, numb2):
+  return numb1+numb2
+
+def substract(numb1, numb2):
+  return numb1-numb2
+
+def multiply(numb1, numb2):
+  return numb1*numb2
+
+def divide(numb1, numb2):
+  return numb1/numb2
+
+def modulo(numb1, numb2):
+  return numb1%numb2
+
+def sqrtn(numb1, numb2):
+  jump = 0
+  numbex = numb1
+  while jump < numb2:
+    numb1 = numb1*numbex
+    jump += 1
+  return numb1
+
+operand = {
+  "+" : add,
+  "-" : substract,
+  "*" : multiply,
+  "/" : divide,
+  "%" : modulo,
+  "^" : sqrtn
+}
+
+def calculator():
+  print(logo)
+
+  number1 = float(input("What is the first number?: "))
+  for symbol in operand:
+    print(symbol)
+  if_continue = True
+
+  while if_continue:
+    operand_symbol = input("Pick an operation: ")
+    number2 = float(input("What is the next number?: "))
+    calc_function = operand[operand_symbol]
+    result = calc_function(number1, number2)
+    print(f"{number1} {operand_symbol} {number2} = {result} ")
+
+    if input(f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation: ") == 'y':
+      number1 = result
+    else:
+      if_continue = False
+      clearConsole()
+      calculator()
+calculator()
+  
+
