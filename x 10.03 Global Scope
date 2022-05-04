@@ -1,0 +1,9 @@
+health = 50
+
+def health_potion():
+  global health
+  health +=25
+  return health
+
+health_potion()
+print(f"You're health is: {health}")
