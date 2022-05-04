@@ -1,0 +1,28 @@
+import random
+health = 50
+
+def health_potion():
+  global health
+  health += 25
+  return health
+
+def hit_me():
+  global health
+  health -= 10
+  return health
+
+skeleton_hit = True
+
+if skeleton_hit:
+  jmp = 1
+  hits = random.randint(1,6)
+  while jmp < hits:
+    if health < 20:
+      health_potion()
+      print(f"Yeh, a health potion!")
+    hit_me()
+    print(f"You got a hit, health: {health}")
+    jmp +=1
+  
+
+print(f"You're health is: {health}")
