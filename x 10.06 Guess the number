@@ -1,0 +1,54 @@
+import os
+import time
+import random
+
+type_numb = 0
+game_status = True
+guess_numb = 0
+
+def clearCons():
+  """Clearing a console"""
+  time.sleep(5)
+  command = 'clear'
+  if os.name in ('nt', 'dos'): 
+      command = 'cls'
+  os.system(command)
+
+def rand_number():
+  """Prepare a number randomly"""
+  guess_numb = random.randint(1,100)
+  return guess_numb
+
+
+player_name = input("What's you're name? ")
+print(f"Hello {player_name}! Welcome to the Number Guessing Game.")
+
+clearCons()
+
+guess_numb = rand_number()
+
+x = input("I'm thinking about number between 1 and 100.\nChoose a dificulity. Type [1] for hard or [2] for easy: ")
+
+
+if x == '1': 
+  print("You have 5 attemps remaining to guess the number.")
+  life = 5
+elif x == '2': 
+  print("You have 10 attemps remaining to guess the number.")
+  life = 10
+
+while game_status:
+  type_numb = int(input("Guess the number: "))
+  if guess_numb == type_numb:
+    game_status = False
+    print("You win!") 
+  elif life <= 0:
+    game_status = False
+    print("You lose!")
+  elif type_numb > guess_numb:
+    print("Too hight")
+  else:
+    print("Too low")
+  life -= 1
+  
+  
